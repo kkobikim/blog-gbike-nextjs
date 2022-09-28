@@ -8,9 +8,9 @@ const MenuButtonGroupTop = (props) => {
   const { locale } = useGlobal()
 
   let links = [
-    { icon: '', name: locale.NAV.SEARCH, to: '/search', show: CONFIG_HEXO.MENU_SEARCH },
+    { icon: '', name: locale.COMMON.MAIN, to: '/', show: CONFIG_HEXO.MENU_MAIN },
     { icon: '', name: locale.COMMON.ARTICLE, to: '/archive', show: CONFIG_HEXO.MENU_ARCHIVE },
-    { icon: '', name: locale.COMMON.CATEGORY, to: '/category', show: CONFIG_HEXO.MENU_CATEGORY }
+    { icon: 'fas fa-search', name: '', to: '/search', show: CONFIG_HEXO.MENU_SEARCH }
   ]
 
   if (customNav) {
@@ -23,7 +23,7 @@ const MenuButtonGroupTop = (props) => {
         return <Link key={`${link.to}`} title={link.to} href={link.to} >
           <a target={link.to.indexOf('http') === 0 ? '_blank' : '_self'} className={'py-1.5 my-1 px-3 duration-300 text-base justify-center items-center cursor-pointer'} >
             <div className='w-full flex text-sm items-center justify-center transform'>
-              <i className={`${link.icon} mr-1`}/>
+              <i className={`${link.icon} mr-1 pt-1`}/>
               <div className='text-center'>{link.name}</div>
             </div>
           </a>

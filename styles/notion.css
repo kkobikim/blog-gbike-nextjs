@@ -74,12 +74,12 @@
 }
 .font-sans {
   font-family: Pretendard Variable, pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-
+  -webkit-font-smoothing: antialiased;
 }
 
 .font-Myeongjo {
   font-family: 'Nanum Myeongjo', serif;
-
+  -webkit-font-smoothing: antialiased;
 }
 
 .notion {
@@ -88,6 +88,7 @@
   color: var(--fg-color);
   caret-color: var(--fg-color);
   font-family: Pretendard Variable, pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 .notion > * {
@@ -1943,5 +1944,5 @@ pre[class*='language-'] {
 }
 
 .h-view-top {
-  height: 34rem;
+  height: 32rem;
 }

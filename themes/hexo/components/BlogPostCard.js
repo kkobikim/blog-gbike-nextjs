@@ -25,21 +25,13 @@ const BlogPostCard = ({ post, showSummary }) => {
               {post.title}
             </a>
 
-          {(!showPreview || showSummary) && !post.results && (
+          {(!showPreview || showSummary) && (
             <p style={{ overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: '4', WebkitBoxOrient: 'vertical' }}
               className="replace max-h-32 my-2 text-gray-500  dark:text-gray-300 text-m font-light leading-7">
               {post.summary}
             </p>
           )}
 
-          {/* 搜索结果 */}
-          {post.results && (
-            <p className="mt-4 text-gray-700 dark:text-gray-300 text-sm font-light leading-7">
-              {post.results.map(r => (
-                <span key={r}>{r}</span>
-              ))}
-            </p>
-          )}
 
             <div
             className={`flex mt-2 items-center ${showPreview ? 'justify-center' : 'justify-start'

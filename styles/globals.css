@@ -4,6 +4,7 @@
 
 html {
   --thumbBG: #b8b8b8;
+  -webkit-font-smoothing: antialiased;
 }
 
 

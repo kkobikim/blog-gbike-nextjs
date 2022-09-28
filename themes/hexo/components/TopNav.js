@@ -30,7 +30,7 @@ const TopNav = props => {
     const nav = document.querySelector('#sticky-nav')
     const header = document.querySelector('#header')
     const showNav = scrollS <= windowTop || scrollS < 5 || (header && scrollS <= header.clientHeight)// 非首页无大图时影藏顶部 滚动条置顶时隐藏
-    const navTransparent = (scrollS < document.documentElement.clientHeight - 12 && router.route === '/') || scrollS < 300 // 透明导航条的条件
+    const navTransparent = (scrollS < document.documentElement.clientHeight - 12 && router.route === '/') || scrollS < 510 // 透明导航条的条件
 
     if (header && navTransparent) {
       nav && nav.classList.replace('bg-white', 'bg-none')

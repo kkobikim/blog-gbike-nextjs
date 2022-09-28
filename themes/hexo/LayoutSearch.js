@@ -25,7 +25,7 @@ export const LayoutSearch = props => {
             const re = new RegExp(`${currentSearch}`, 'gim')
             container.innerHTML = container.innerHTML.replace(
               re,
-              `<span class='text-red-500 border-b border-dashed'>${currentSearch}</span>`
+              `<span class='text-green-400 border-none'>${currentSearch}</span>`
             )
           }
         }

@@ -35,22 +35,17 @@ const TopNav = props => {
     if (header && navTransparent) {
       nav && nav.classList.replace('bg-white', 'bg-none')
       nav && nav.classList.replace('text-black', 'text-white')
-      nav && nav.classList.replace('border', 'border-transparent')
       nav && nav.classList.replace('shadow-md', 'shadow-none')
+      nav && nav.classList.replace('glassmorphism', 's')
+      nav && nav.classList.replace('border-b', 'border-transparent')
     } else {
       nav && nav.classList.replace('bg-none', 'bg-white')
+      nav && nav.classList.replace('s', 'glassmorphism')
       nav && nav.classList.replace('text-white', 'text-black')
-      nav && nav.classList.replace('border-transparent', 'border')
+      nav && nav.classList.replace('border-transparent', 'border-b')
       nav && nav.classList.replace('shadow-none', 'shadow-md')
     }
 
-    if (!showNav) {
-      nav && nav.classList.replace('top-0', '-top-20')
-      windowTop = scrollS
-    } else {
-      nav && nav.classList.replace('-top-20', 'top-0')
-      windowTop = scrollS
-    }
     navDarkMode()
   }, 200)
 
@@ -103,21 +98,20 @@ const TopNav = props => {
     <SearchDrawer cRef={searchDrawer} slot={searchDrawerSlot}/>
 
     {/* 导航栏 */}
-    <div id='sticky-nav' className={'top-0 fixed text-black w-full z-20 font-san backdrop-blur-sm bg-white flex items-center justify-center'}>
-      <div className='max-w-5xl w-full flex justify-between items-center px-4 py-2'>
+    <div id='sticky-nav' className={'top-0 shadow-md fixed bg-none animate__animated animate__fadeIn dark:text-gray-200 text-black w-full z-20 transform duration-200 font-san border-transparent dark:border-transparent justify-center s'}>
+      <div className='w-full flex justify-between items-center px-4 py-3'>
         <div className='flex'>
          <Logo {...props}/>
         </div>
 
         {/* 右侧功能 */}
-        <div className='mr-1 justify-end items-center font-serif'>
-          <div className='hidden lg:flex'> <MenuButtonGroupTop {...props}/></div>
+        <div className='mr-1 justify-end items-center font-serif '>
+          <div className='hidden lg:flex'> <MenuButtonGroupTop {...props}/> <DarkModeButton/></div>
           <div onClick={toggleMenuOpen} className='w-8 justify-center items-center h-8 cursor-pointer flex lg:hidden'>
           { isOpen ? <i className='fas fa-times'/> : <i className='fas fa-bars'/> }
           </div>
         </div>
       </div>
-      <DarkModeButton/>
       <Collapse type='vertical' isOpen={isOpen} className='shadow-xl'>
         <div className='bg-white dark:bg-hexo-black-gray pt-1 py-2 px-5 lg:hidden '>
           <MenuList {...props}/>

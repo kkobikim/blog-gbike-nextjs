@@ -4,12 +4,11 @@ import BlogPostListPage from './components/BlogPostListPage'
 import LayoutBase from './LayoutBase'
 import SearchInput from './components/SearchInput'
 import { useGlobal } from '@/lib/global'
-import TagItemMini from './components/TagItemMini'
 import Card from './components/Card'
 import Link from 'next/link'
 
 export const LayoutSearch = props => {
-  const { keyword, tags, categories } = props
+  const { keyword, categories } = props
   const { locale } = useGlobal()
   const router = useRouter()
   const currentSearch = keyword || router?.query?.s

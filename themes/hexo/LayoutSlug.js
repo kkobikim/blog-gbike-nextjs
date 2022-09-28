@@ -52,10 +52,10 @@ export const LayoutSlug = props => {
       showTag={false}
       floatSlot={floatSlot}
     >
-      <div className="w-full lg:shadow-sm lg:hover:shadow lg:border lg:rounded-xl lg:px-2 lg:py-4 bg-white dark:bg-hexo-black-gray dark:border-black">
+      <div className="w-full lg:px-2 lg:py-4">
         {lock && <ArticleLock password={post.password} validPassword={validPassword} />}
 
-        {!lock && <div id="container" className="overflow-x-auto flex-grow mx-auto md:w-full md:px-5 ">
+        {!lock && <div id="container" className="overflow-x-auto max-w-screen-md flex-grow mx-auto md:w-full md:px-5 ">
 
           <article itemScope itemType="https://schema.org/Movie" className="subpixel-antialiased" >
             {/* Notion文章主体 */}
@@ -74,17 +74,14 @@ export const LayoutSlug = props => {
                 data-ad-slot="3806269138" />
             </section>
 
-            <ArticleCopyright {...props} />
-            <ArticleRecommend {...props} />
+        
+   
             <ArticleAdjacent {...props} />
           </article>
 
-          <hr className='border-dashed' />
 
           {/* 评论互动 */}
-          <div className="duration-200 overflow-x-auto bg-white dark:bg-hexo-black-gray px-3">
-            <Comment frontMatter={post} />
-          </div>
+        
         </div>}
       </div>
 

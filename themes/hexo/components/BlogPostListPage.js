@@ -15,12 +15,12 @@ const BlogPostListPage = ({ page = 1, posts = [], postCount }) => {
   const totalPage = Math.ceil(postCount / BLOG.POSTS_PER_PAGE)
   const showPagination = postCount >= BLOG.POSTS_PER_PAGE
 
+
   if (!posts || posts.length === 0) {
     return <BlogPostListEmpty />
   } else {
     return (
       <div id="container" className='w-full'>
-        {/* 文章列表 */}
         <div className="space-y-12 px-2">
           {posts.map(post => (
             <BlogPostCard key={post.id} post={post} />

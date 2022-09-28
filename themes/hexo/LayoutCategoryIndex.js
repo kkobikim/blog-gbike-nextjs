@@ -1,11 +1,10 @@
-import { useGlobal } from '@/lib/global'
 import Link from 'next/link'
 import Card from './components/Card'
 import LayoutBase from './LayoutBase'
 
 export const LayoutCategoryIndex = props => {
   const { categories } = props
-  const { locale } = useGlobal()
+  
   return (
     <LayoutBase {...props}>
       <Card className="w-full">
@@ -30,3 +29,4 @@ export const LayoutCategoryIndex = props => {
     </LayoutBase>
   )
 }
+LayoutCategoryIndex

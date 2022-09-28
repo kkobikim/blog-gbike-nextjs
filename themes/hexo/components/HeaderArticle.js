@@ -18,27 +18,22 @@ export default function HeaderArticle({ post, siteInfo }) {
   return (
     <div
       id="header"
-      className="w-full h-96 relative md:flex-shrink-0 overflow-hidden bg-cover bg-center bg-no-repeat animate__animated animate__fadeIn"
+      className="w-full h-96 relative overflow-hidden bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: headerImage }}
     >
-      <header className="animate__slideInDown animate__animated bg-black bg-opacity-70 absolute top-0 w-full h-96 py-10 flex justify-center items-center font-sans">
+      <header className="bg-black bg-opacity-50 absolute top-0 w-full h-96 py-10 flex justify-center items-center font-sans">
         <div className='mt-24'>
           {/* 文章Title */}
+                  <div className="cursor-pointer flex justify-center">
+                    {post.category}
+                  </div>
+             
           <div className="font-bold text-xl shadow-text flex justify-center text-white dark:text-white font-sans">
             {post.title}
           </div>
 
           <section className="flex-wrap shadow-text flex text-sm justify-center mt-2 text-white dark:text-gray-400 font-light leading-8">
-            <div className='dark:text-gray-200'>
-              {post.category && <>
-                <Link href={`/category/${post.category}`} passHref>
-                  <div className="cursor-pointer mr-2 dark:hover:text-white hover:underline">
-                    <i className="mr-1 fas fa-folder-open" />
-                    {post.category}
-                  </div>
-                </Link>
-              </>}
-            </div>
+            
             <div className='flex justify-center'>
               {post?.type[0] !== 'Page' && (
                 <>
@@ -57,8 +52,6 @@ export default function HeaderArticle({ post, siteInfo }) {
               </div>
             </div>
             {BLOG.ANALYTICS_BUSUANZI_ENABLE && <div className="busuanzi_container_page_pv font-light mr-2">
-              <span className="mr-2 busuanzi_value_page_pv" />
-              次访问
             </div>}
           </section>
         </div>

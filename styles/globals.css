@@ -162,3 +162,8 @@ nav {
   height: 1.25em;
   margin: -.125em .25em;
 }
+
+.dark .dark\:bg-black {
+  --tw-bg-opacity: 1;
+  background-color: #17171C;
+}

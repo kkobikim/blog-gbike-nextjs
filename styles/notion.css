@@ -1,9 +1,10 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/variable/pretendardvariable.css");
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap');
-
+@import url('https://cdn.jsdelivr.net/gh/toss/tossface/dist/tossface.css');
 
 :root {
+  --notion-font: Pretendard Variable, pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   --fg-color: rgb(55, 53, 47);
   --fg-color-0: rgba(55, 53, 47, 0.09);
   --fg-color-1: rgba(55, 53, 47, 0.16);
@@ -71,13 +72,17 @@
   --notion-max-width: 720px;
   --notion-header-height: 45px;
 }
+.font-sans {
+  font-family: Pretendard Variable, pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+}
 
 .notion {
   font-size: 17px;
   line-height: 1.5;
   color: var(--fg-color);
   caret-color: var(--fg-color);
-  font-family: inherit;
+  font-family: Pretendard Variable, pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
 .notion > * {
@@ -591,7 +596,7 @@
 }
 
 .notion-page-icon {
-  font-family: 'Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji,
+  font-family: Tossface, 'Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji,
     'Noto Color Emoji', 'Segoe UI Symbol', 'Android Emoji', EmojiSymbols;
   font-size: 1.1em;
   margin: 2px 4px 0 2px;
@@ -1896,11 +1901,18 @@ pre[class*='language-'] {
   padding: 7px 8px 0;
 }
 
-.notion-nav-header-logo {
+.logo {
   width: 158px;
   height: 20px;
   cursor: pointer;
   background-repeat: no-repeat;
-  background-image: var(--fg-logo);
+  background-image: url(/gcooter.svg);
+}
 
+.dark .dark\:logo-dark {
+  width: 158px;
+  height: 20px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-image: url(/gcooter-white.svg);
 }

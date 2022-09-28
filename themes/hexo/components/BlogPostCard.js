@@ -15,7 +15,7 @@ const BlogPostCard = ({ post, showSummary }) => {
         className="animate__animated animate__fadeIn flex flex-row justify-between duration-300 "
       >
         <div className="p-4 flex flex-col w-full">
-              <a className="cursor-pointer font-light text-gray-600 dark:text-gray-300 text-sm transform">
+              <a className="cursor-pointer my-2 font-light text-gray-500 dark:text-gray-300 text-sm transform">
                 {post.category}
               </a>
             <a
@@ -27,7 +27,7 @@ const BlogPostCard = ({ post, showSummary }) => {
 
           {(!showPreview || showSummary) && !post.results && (
             <p style={{ overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: '4', WebkitBoxOrient: 'vertical' }}
-              className="replace max-h-32 my-4 text-gray-700  dark:text-gray-300 text-sm font-light leading-7">
+              className="replace max-h-32 my-2 text-gray-500  dark:text-gray-300 text-m font-light leading-7">
               {post.summary}
             </p>
           )}

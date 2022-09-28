@@ -21,10 +21,10 @@ const MenuButtonGroupTop = (props) => {
     {links.map(link => {
       if (link.show) {
         return <Link key={`${link.to}`} title={link.to} href={link.to} >
-          <a target={link.to.indexOf('http') === 0 ? '_blank' : '_self'} className={'py-1.5 my-1 px-3 duration-300 text-base justify-center items-center cursor-pointer'} >
+          <a target={link.to.indexOf('http') === 0 ? '_blank' : '_self'} className={'py-1.5 my-1 px-3 duration-300 text-base justify-center items-center rounded-md hover:bg-gray-100 cursor-pointer'} >
             <div className='w-full flex text-sm items-center justify-center transform'>
-              <i className={`${link.icon} mr-1 pt-1`}/>
-              <div className='text-center'>{link.name}</div>
+              <i className={`${link.icon} mr-1 pt-1 pl-1`}/>
+              <div className='text-center font-medium pr-2'>{link.name}</div>
             </div>
           </a>
         </Link>

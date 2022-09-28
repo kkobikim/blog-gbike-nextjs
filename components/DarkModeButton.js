@@ -13,7 +13,7 @@ const DarkModeButton = (props) => {
     htmlElement.classList?.add(newStatus ? 'dark' : 'light')
   }
 
-  return <div className={'z-10 duration-200 pl-3 cursor-pointer py-2.5 text-m ' + props.className}>
+  return <div className={'z-10 duration-200 pl-3 cursor-pointer pt-2 text-m ' + props.className}>
     <i id='darkModeButton' className={`transform duration-200 fas ${isDarkMode ? 'fa-sun' : 'fa-moon'}`}
        onClick={handleChangeDarkMode} />
   </div>

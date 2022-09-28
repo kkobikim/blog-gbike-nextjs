@@ -5,6 +5,7 @@
 html {
   --thumbBG: #b8b8b8;
   -webkit-font-smoothing: antialiased;
+  word-break:keep-all
 }
 
 
@@ -170,4 +171,15 @@ nav {
 .dark .dark\:bg-black {
   --tw-bg-opacity: 1;
   background-color: #2F3437;
+}
+
+@layer utilities {
+  .hidden-scrollbar {
+    -ms-overflow-style: none; /* IE, Edge 対応 */
+    scrollbar-width: none; /* Firefox 対応 */
+  }
+  .hidden-scrollbar::-webkit-scrollbar {
+    /* Chrome, Safari 対応 */
+    display: none;
+  }
 }

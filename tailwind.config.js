@@ -12,7 +12,7 @@ module.exports = {
           DEFAULT: BLOG.BACKGROUND_LIGHT || '#ffffff'
         },
         night: {
-          DEFAULT: BLOG.BACKGROUND_DARK || '#17171C'
+          DEFAULT: BLOG.BACKGROUND_DARK || '#ffffff'
         },
         hexo: {
           'background-gray': '#fffff',

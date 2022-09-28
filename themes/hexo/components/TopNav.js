@@ -84,7 +84,7 @@ const TopNav = props => {
           <div className='text-sm flex flex-nowrap justify-between font-light px-2'>
             <div className='text-gray-600 dark:text-gray-200'><i className='mr-2 fas fa-th-list' />{locale.COMMON.CATEGORY}</div>
             <Link href={'/category'} passHref>
-              <a className='mb-3 text-gray-400 hover:text-black dark:text-gray-400 dark:hover:text-white hover:underline cursor-pointer'>
+              <a className='mb-3 text-gray-400 md:hover:text-black dark:text-gray-400 dark:md:hover:text-white md:hover:underline cursor-pointer'>
                 {locale.COMMON.MORE} <i className='fas fa-angle-double-right' />
               </a>
             </Link>
@@ -108,7 +108,7 @@ const TopNav = props => {
         {/* 右侧功能 */}
         <div className='mr-1 justify-end items-center font-serif '>
           <div className='hidden md:flex'> <MenuButtonGroupTop {...props}/> <DarkModeButton/></div>
-          <div onClick={toggleMenuOpen} className='w-8 justify-center items-center h-8 cursor-pointer flex md:hidden'>
+          <div onClick={toggleMenuOpen} className='w-8 justify-end items-center h-8 cursor-pointer flex md:hidden'>
           { isOpen ? <i className='fas fa-times'/> : <i className='fas fa-bars'/>  }
           </div>
         </div>

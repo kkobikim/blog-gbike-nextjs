@@ -100,7 +100,7 @@ const TopNav = props => {
 
     {/* 导航栏 */}
     <div id='sticky-nav' className={'top-0 fixed bg-none animate__animated animate__fadeIn dark:text-gray-200 text-black w-full z-20 transform duration-200 font-san border-transparent dark:border-transparent justify-center s'}>
-      <div className='w-full flex justify-between items-center px-6 py-2'>
+      <div className='w-full max-w-screen-lg flex justify-between m-auto items-center px-6 py-2'>
         <div className='flex'>
          <Logo {...props}/>
         </div>
@@ -114,7 +114,7 @@ const TopNav = props => {
         </div>
       </div>
       <Collapse type='vertical' isOpen={isOpen} className='shadow-xl'>
-        <div className='bg-white dark:bg-hexo-black-gray pt-1 py-2 px-5 lg:hidden '>
+        <div className='bg-white dark:bg-hexo-black-gray pt-1 py-2 px-5 md:hidden '>
           <MenuList {...props}/>
         </div>
       </Collapse>

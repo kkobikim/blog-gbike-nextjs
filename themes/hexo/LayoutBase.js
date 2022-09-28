@@ -59,7 +59,7 @@ const LayoutBase = props => {
 
       {headerSlot}
 
-      <main id="wrapper" className="w-full pt-8 pb-56 md:px-8 lg:px-6 min-h-screen">
+      <main id="wrapper" className="w-full pt-8 pb-56 px-4 lg:px-6 min-h-screen">
         <div
           id="container-inner"
           className="pt-28 w-full mx-auto lg:flex lg:space-x-4 justify-center"

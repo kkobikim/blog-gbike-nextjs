@@ -8,11 +8,12 @@ import TocDrawerButton from './components/TocDrawerButton'
 import LayoutBase from './LayoutBase'
 import NotionPage from '@/components/NotionPage'
 import TagItemMini from './components/TagItemMini'
+import RecommendPosts from './components/RecommendPosts'
 import ArticleAdjacent from './components/ArticleAdjacent'
 import { isBrowser } from '@/lib/utils'
 
 export const LayoutSlug = props => {
-  const { post, lock, validPassword } = props
+  const { post, recommendPosts, lock, validPassword, showArticleInfo } = props
 
   if (!post) {
     return <LayoutBase
@@ -69,9 +70,10 @@ export const LayoutSlug = props => {
                 ))}
               </div>
             </div>
-        
-   
+            {showArticleInfo && <>
+            <RecommendPosts currentPost={post} recommendPosts={recommendPosts} />
             <ArticleAdjacent {...props} />
+            </>}
           </article>
 
 

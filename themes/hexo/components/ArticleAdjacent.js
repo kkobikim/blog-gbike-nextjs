@@ -31,5 +31,6 @@ export default function ArticleAdjacent ({ prev, next }) {
                 alt={next.title}
                 className=" max-h-52 h-44 w-full rounded-2lg transform object-cover duration-200"
               />
+              
   </section>
 }

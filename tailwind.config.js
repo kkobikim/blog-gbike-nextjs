@@ -15,7 +15,7 @@ module.exports = {
           DEFAULT: BLOG.BACKGROUND_DARK || '#17171C'
         },
         hexo: {
-          'background-gray': '#f5f5f5',
+          'background-gray': '#fffff',
           'black-gray': '#101414',
           'light-gray': '#e5e5e5'
         }

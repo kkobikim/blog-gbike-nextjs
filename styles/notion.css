@@ -1921,3 +1921,27 @@ pre[class*='language-'] {
   background-repeat: no-repeat;
   background-image: url(/gcooter-white.svg);
 }
+
+.notion-card-hover {
+  border:1px solid var(--bg-color);
+}
+
+.notion-card:hover .notion-card-hover {
+  border:1px solid var(--bg-color);
+  transform: translateY(-7px);
+  transition: all 0.2s ease-out;
+  background:none;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.notion-card:hover .notion-card-text {
+  color:#0CB950;
+}
+
+.rounded-2lg {
+  border-radius: 1.5rem;
+}
+
+.h-view-top {
+  height: 34rem;
+}

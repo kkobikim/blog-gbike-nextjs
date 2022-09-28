@@ -18,11 +18,11 @@ export default function HeaderArticle({ post, siteInfo }) {
   return (
     <div
       id="header"
-      className="w-full h-96 relative overflow-hidden bg-cover bg-center bg-no-repeat"
+      className="w-full h-view-top relative overflow-hidden bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: headerImage }}
     >
-      <header className="bg-black bg-opacity-50 absolute top-0 w-full h-96 py-10 flex justify-center items-center font-sans">
-        <div className='mt-28'>
+      <header className="bg-black bg-opacity-40 absolute top-0 w-full h-view-top py-10 flex justify-center items-end font-sans">
+        <div className='mb-4'>
           {/* 文章Title */}
                   <div className="pb-5 font-thin text-gray-300 dark:text-white flex justify-center">
                     {post.category}

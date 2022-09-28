@@ -111,15 +111,18 @@ nav {
 
 
 .glassmorphism{
-  background: hsla(0, 0%, 100%, .75);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  background: hsla(0, 0%, 100%, 0.8);
+  -webkit-backdrop-filter: saturate(180%) blur(8px);
+  backdrop-filter: saturate(180%) blur(9px);
+  border-bottom-color: rgba(135, 131, 120, 0.15);
 }
 
 .dark .glassmorphism{
-  background: rgba(31, 41, 55, .75);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  background: transparent;
+  box-shadow: inset 0 -1px 0 0 rgb(0 0 0 / 10%);
+  -webkit-backdrop-filter: saturate(180%) blur(8px);
+  backdrop-filter: saturate(180%) blur(9px);
+  border-bottom-color: rgb(71, 76, 80);
 }
 
 .medium-zoom-overlay{
@@ -165,5 +168,5 @@ nav {
 
 .dark .dark\:bg-black {
   --tw-bg-opacity: 1;
-  background-color: #17171C;
+  background-color: #2F3437;
 }

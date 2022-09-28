@@ -59,7 +59,7 @@ const LayoutBase = props => {
 
       {headerSlot}
 
-      <main id="wrapper" className="w-full py-8 md:px-8 lg:px-6 min-h-screen">
+      <main id="wrapper" className="w-full pt-8 pb-56 md:px-8 lg:px-6 min-h-screen">
         <div
           id="container-inner"
           className="pt-28 w-full mx-auto lg:flex lg:space-x-4 justify-center"
@@ -71,7 +71,7 @@ const LayoutBase = props => {
       </main>
 
       {/* 右下角悬浮 */}
-      <div className="bottom-12 right-1 fixed justify-end z-20 font-sans text-white bg-indigo-500 dark:bg-hexo-black-gray rounded-sm">
+      <div className="bottom-12 right-1 fixed justify-end z-20 font-sans text-white bg-green-600 dark:bg-hexo-black-gray rounded-sm">
         <div
           className={
             (show ? 'animate__animated ' : 'hidden') +
@@ -79,7 +79,6 @@ const LayoutBase = props => {
           }
         >
           <FloatDarkModeButton />
-          {floatSlot}
           <JumpToTopButton />
         </div>
       </div>

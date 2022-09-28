@@ -12,14 +12,14 @@ const BlogPostCard = ({ post, showSummary }) => {
     <div className="w-ful cursor-pointer duration-300">
       <div
         key={post.id}
-        className="animate__animated animate__fadeIn flex flex-row justify-between duration-300 "
+        className="notion-card animate__animated animate__fadeIn flex flex-row justify-between duration-300 "
       >
         <div className="p-4 flex flex-col w-full">
               <a className="cursor-pointer my-2 font-light text-gray-500 dark:text-gray-300 text-sm transform">
                 {post.category}
               </a>
             <a
-              className={`replace cursor-pointer text-2xl font-sans ${showPreview ? 'text-center' : ''
+              className={`replace cursor-pointer notion-card-text text-2xl font-sans ${showPreview ? 'text-center' : ''
                 } leading-tight text-gray-600 dark:text-gray-100`}
             >
               {post.title}
@@ -69,12 +69,12 @@ const BlogPostCard = ({ post, showSummary }) => {
           </div>
         </div>
 
-            <div className="flex max-w-xs w-96 relative duration-200 rounded-lg cursor-pointer transform  hover:-translate-y-3">
+            <div className="flex notion-card-hover max-w-xs w-96 relative duration-200 rounded-2lg cursor-pointer transform border-white dark:border-black">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={post?.page_cover}
                 alt={post.title}
-                className="max-w-xs max-h-52 h-44 w-full rounded-lg transform object-cover duration-200 hover:shadow-xl"
+                className="max-w-xs max-h-52 h-44 w-full rounded-2lg transform object-cover duration-200"
               />
               {/* <Image className='hover:scale-125 rounded-t-xl lg:rounded-r-xl lg:rounded-t-none transform duration-500' src={post?.page_cover} alt={post.title} layout='fill' objectFit='cover' loading='lazy' /> */}
             </div>

@@ -21,7 +21,7 @@ const BlogPostListPage = ({ page = 1, posts = [], postCount }) => {
   } else {
     return (
       <div id="container" className='w-full'>
-        <div className="space-y-12 px-2">
+        <div className="space-y-16 px-2">
           {posts.map(post => (
             <BlogPostCard key={post.id} post={post} />
           ))}

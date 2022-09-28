@@ -6,10 +6,10 @@ import CategoryGroup from './CategoryGroup'
 import Collapse from './Collapse'
 import Logo from './Logo'
 import SearchDrawer from './SearchDrawer'
-import TagGroups from './TagGroups'
 import MenuButtonGroupTop from './MenuButtonGroupTop'
 import MenuList from './MenuList'
 import { useRouter } from 'next/router'
+import DarkModeButton from '@/components/DarkModeButton'
 
 let windowTop = 0
 
@@ -19,7 +19,7 @@ let windowTop = 0
  * @returns
  */
 const TopNav = props => {
-  const { tags, currentTag, categories, currentCategory } = props
+  const { categories, currentCategory } = props
   const { locale } = useGlobal()
   const searchDrawer = useRef()
   const { isDarkMode } = useGlobal()
@@ -97,29 +97,14 @@ const TopNav = props => {
         </section>
     ) }
 
-    { tags && (
-        <section className='mt-4'>
-          <div className='text-sm py-2 px-2 flex flex-nowrap justify-between font-light dark:text-gray-200'>
-            <div className='text-gray-600 dark:text-gray-200'><i className='mr-2 fas fa-tag'/>{locale.COMMON.TAGS}</div>
-            <Link href={'/tag'} passHref>
-              <a className='text-gray-400 hover:text-black  dark:hover:text-white hover:underline cursor-pointer'>
-                {locale.COMMON.MORE} <i className='fas fa-angle-double-right' />
-              </a>
-            </Link>
-          </div>
-          <div className='p-2'>
-            <TagGroups tags={tags} currentTag={currentTag} />
-          </div>
-        </section>
-    ) }
-    </>
 
+    </>
   return (<div id='top-nav' className='z-40'>
     <SearchDrawer cRef={searchDrawer} slot={searchDrawerSlot}/>
 
     {/* 导航栏 */}
-    <div id='sticky-nav' className={'top-0 shadow-md fixed bg-none animate__animated animate__fadeIn dark:bg-hexo-black-gray dark:text-gray-200 text-black w-full z-20 transform duration-200 font-san border-transparent  dark:border-transparent'}>
-      <div className='w-full flex justify-between items-center px-4 py-2'>
+    <div id='sticky-nav' className={'top-0 fixed text-black w-full z-20 font-san backdrop-blur-sm bg-white flex items-center justify-center'}>
+      <div className='max-w-5xl w-full flex justify-between items-center px-4 py-2'>
         <div className='flex'>
          <Logo {...props}/>
         </div>
@@ -132,7 +117,7 @@ const TopNav = props => {
           </div>
         </div>
       </div>
-
+      <DarkModeButton/>
       <Collapse type='vertical' isOpen={isOpen} className='shadow-xl'>
         <div className='bg-white dark:bg-hexo-black-gray pt-1 py-2 px-5 lg:hidden '>
           <MenuList {...props}/>

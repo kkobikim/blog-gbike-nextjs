@@ -59,15 +59,14 @@ const LayoutBase = props => {
 
       {headerSlot}
 
-      <main id="wrapper" className="w-full py-8 md:px-8 lg:px-24 min-h-screen">
+      <main id="wrapper" className="w-full py-8 md:px-8 lg:px-6 min-h-screen">
         <div
           id="container-inner"
-          className="pt-14 w-full mx-auto lg:flex lg:space-x-4 justify-center"
+          className="pt-28 w-full mx-auto lg:flex lg:space-x-4 justify-center"
         >
-          <div className="w-full max-w-4xl">
+          <div className="w-full max-w-5xl">
             {onLoading ? <LoadingCover /> : children}
           </div>
-          <SideRight {...props} slot={rightAreaSlot} />
         </div>
       </main>
 

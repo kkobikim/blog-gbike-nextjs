@@ -8,39 +8,26 @@ import NotionPage from '@/components/NotionPage'
 const BlogPostCard = ({ post, showSummary }) => {
   const showPreview = CONFIG_HEXO.POST_LIST_PREVIEW && post.blockMap
   return (
-    <div className="w-full shadow-sm hover:shadow border dark:border-black rounded-xl bg-white dark:bg-hexo-black-gray duration-300">
+    <Link href={`${BLOG.SUB_PATH}/article/${post.slug}`} passHref>
+    <div className="w-ful cursor-pointer duration-300">
       <div
         key={post.id}
-        className="animate__animated animate__fadeIn flex flex-col-reverse lg:flex-row justify-between duration-300"
+        className="animate__animated animate__fadeIn flex flex-row justify-between duration-300 "
       >
-        <div className="lg:p-8 p-4 flex flex-col w-full">
-          <Link href={`${BLOG.SUB_PATH}/article/${post.slug}`} passHref>
+        <div className="p-4 flex flex-col w-full">
+              <a className="cursor-pointer font-light text-gray-600 dark:text-gray-300 text-sm transform">
+                {post.category}
+              </a>
             <a
-              className={`replace cursor-pointer hover:underline text-2xl font-sans ${showPreview ? 'text-center' : ''
-                } leading-tight text-gray-700 dark:text-gray-100 hover:text-indigo-700 dark:hover:text-indigo-400`}
+              className={`replace cursor-pointer text-2xl font-sans ${showPreview ? 'text-center' : ''
+                } leading-tight text-gray-600 dark:text-gray-100`}
             >
               {post.title}
             </a>
-          </Link>
-
-          <div
-            className={`flex mt-2 items-center ${showPreview ? 'justify-center' : 'justify-start'
-              } flex-wrap dark:text-gray-500 text-gray-400 hover:text-indigo-700 dark:hover:text-indigo-400`}
-          >
-            <Link
-              href={`/archive#${post?.date?.start_date?.substr(0, 7)}`}
-              passHref
-            >
-              <a className="font-light hover:underline cursor-pointer text-sm leading-4 mr-3">
-                <i className="far fa-calendar-alt mr-1" />
-                {post.date?.start_date || post.lastEditedTime}
-              </a>
-            </Link>
-          </div>
 
           {(!showPreview || showSummary) && !post.results && (
             <p style={{ overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: '4', WebkitBoxOrient: 'vertical' }}
-              className="replace h-full max-h-32 my-4 text-gray-700  dark:text-gray-300 text-sm font-light leading-7">
+              className="replace max-h-32 my-4 text-gray-700  dark:text-gray-300 text-sm font-light leading-7">
               {post.summary}
             </p>
           )}
@@ -54,6 +41,15 @@ const BlogPostCard = ({ post, showSummary }) => {
             </p>
           )}
 
+            <div
+            className={`flex mt-2 items-center ${showPreview ? 'justify-center' : 'justify-start'
+              } flex-wrap dark:text-gray-500 text-gray-400`}
+             >
+              <a className="font-light cursor-pointer text-sm leading-4 mr-3">
+                {post.date?.start_date || post.lastEditedTime}
+              </a>
+          </div>
+
           {showPreview && (
             <div className="overflow-ellipsis truncate">
               <NotionPage post={post} />
@@ -61,12 +57,7 @@ const BlogPostCard = ({ post, showSummary }) => {
           )}
 
           <div className="text-gray-400 justify-between flex">
-            <Link href={`/category/${post.category}`} passHref>
-              <a className="cursor-pointer font-light text-sm hover:underline hover:text-indigo-700 dark:hover:text-indigo-400 transform">
-                <i className="mr-1 far fa-folder" />
-                {post.category}
-              </a>
-            </Link>
+          
             <div className="md:flex-nowrap flex-wrap md:justify-start inline-block">
               <div>
                 {' '}
@@ -78,21 +69,18 @@ const BlogPostCard = ({ post, showSummary }) => {
           </div>
         </div>
 
-        {CONFIG_HEXO.POST_LIST_COVER && !showPreview && post?.page_cover && !post.results && (
-          <Link href={`${BLOG.SUB_PATH}/article/${post.slug}`} passHref>
-            <div className="flex w-full relative duration-200 rounded-t-xl lg:rounded-r-xl lg:rounded-t-none cursor-pointer transform overflow-hidden">
+            <div className="flex max-w-xs w-96 relative duration-200 rounded-lg cursor-pointer transform  hover:-translate-y-3">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={post?.page_cover}
                 alt={post.title}
-                className="max-h-52 lg:max-h-72 w-full hover:scale-125 rounded-t-xl lg:rounded-r-xl lg:rounded-t-none transform object-cover duration-500"
+                className="max-w-xs max-h-52 h-44 w-full rounded-lg transform object-cover duration-200 hover:shadow-xl"
               />
               {/* <Image className='hover:scale-125 rounded-t-xl lg:rounded-r-xl lg:rounded-t-none transform duration-500' src={post?.page_cover} alt={post.title} layout='fill' objectFit='cover' loading='lazy' /> */}
             </div>
-          </Link>
-        )}
+     
       </div>
-    </div>
+    </div></Link>
   )
 }
 

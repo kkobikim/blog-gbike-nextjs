@@ -34,30 +34,8 @@ export const LayoutSearch = props => {
   })
   return (
     <LayoutBase {...props} currentSearch={currentSearch}>
-      <div className="my-6 px-2">
+      <div className="my-6 pb-10 px-2">
         <SearchInput cRef={cRef} {...props} />
-        {/* 分类 */}
-        <Card className="w-full mt-4">
-          <div id="category-list" className="duration-200 flex flex-wrap mx-8">
-            {categories?.map(category => {
-              return (
-                <Link
-                  key={category.name}
-                  href={`/category/${category.name}`}
-                  passHref
-                >
-                  <div
-                    className={
-                      ' duration-300 dark:hover:text-white rounded-lg px-5 cursor-pointer py-2 hover:bg-indigo-400 hover:text-white'
-                    }
-                  >
-                    {category.name}
-                  </div>
-                </Link>
-              )
-            })}
-          </div>
-        </Card>
       </div>
       <div id="container">
         <BlogPostListPage {...props} />

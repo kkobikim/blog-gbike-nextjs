@@ -10,6 +10,7 @@ import MenuButtonGroupTop from './MenuButtonGroupTop'
 import MenuList from './MenuList'
 import { useRouter } from 'next/router'
 import DarkModeButton from '@/components/DarkModeButton'
+import ProgressBar from 'react-progressbar-on-scroll'
 
 let windowTop = 0
 
@@ -30,7 +31,7 @@ const TopNav = props => {
     const nav = document.querySelector('#sticky-nav')
     const header = document.querySelector('#header')
     const showNav = scrollS <= windowTop || scrollS < 5 || (header && scrollS <= header.clientHeight)// 非首页无大图时影藏顶部 滚动条置顶时隐藏
-    const navTransparent = (scrollS < document.documentElement.clientHeight - 12 && router.route === '/') || scrollS < 510 // 透明导航条的条件
+    const navTransparent = (scrollS < document.documentElement.clientHeight - 12 && router.route === '/') || scrollS < 20 // 透明导航条的条件
 
     if (header && navTransparent) {
       nav && nav.classList.replace('bg-white', 'bg-none')
@@ -53,7 +54,7 @@ const TopNav = props => {
     const nav = document.getElementById('sticky-nav')
     const header = document.querySelector('#header')
     if (!isDarkMode && nav && header) {
-      if (window.scrollY < header.clientHeight) {
+      if (window.scrollY < 20) {
         nav?.classList?.add('dark')
       } else {
         nav?.classList?.remove('dark')
@@ -117,6 +118,11 @@ const TopNav = props => {
           <MenuList {...props}/>
         </div>
       </Collapse>
+      <ProgressBar
+  color="#000"
+  height={3}
+  position="bottom"
+/>
     </div>
   </div>)
 }

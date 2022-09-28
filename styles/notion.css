@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400&display=swap');
 @import url('https://cdn.jsdelivr.net/gh/toss/tossface/dist/tossface.css');
-
+.dark root {
+  --fg-color: #fafa;
+}
 :root {
   --notion-font: Pretendard Variable, pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   --fg-color: rgb(55, 53, 47);
@@ -1923,9 +1925,6 @@ pre[class*='language-'] {
   background-image: url(/gcooter-white.svg);
 }
 
-.notion-card-hover {
-  border:1px solid var(--bg-color);
-}
 
 .notion-card:hover .notion-card-hover {
   border:1px solid var(--bg-color);

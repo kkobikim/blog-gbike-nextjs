@@ -22,34 +22,26 @@ export default function HeaderArticle({ post, siteInfo }) {
       style={{ backgroundImage: headerImage }}
     >
       <header className="bg-black bg-opacity-50 absolute top-0 w-full h-96 py-10 flex justify-center items-center font-sans">
-        <div className='mt-24'>
+        <div className='mt-28'>
           {/* 文章Title */}
-                  <div className="cursor-pointer flex justify-center">
+                  <div className="pb-5 font-thin text-gray-300 dark:text-white flex justify-center">
                     {post.category}
                   </div>
              
-          <div className="font-bold text-xl shadow-text flex justify-center text-white dark:text-white font-sans">
+          <div className="font-light text-3xl flex justify-center text-white dark:text-white font-Myeongjo">
             {post.title}
           </div>
 
-          <section className="flex-wrap shadow-text flex text-sm justify-center mt-2 text-white dark:text-gray-400 font-light leading-8">
+          <section className="flex-wrap flex text-m justify-center mt-10 text-gray-400 dark:text-gray-400 font-thin leading-8">
             
             <div className='flex justify-center'>
               {post?.type[0] !== 'Page' && (
                 <>
-                  <Link
-                    href={`/archive#${post?.date?.start_date?.substr(0, 7)}`}
-                    passHref
-                  >
-                    <a className="pl-1 mr-2 cursor-pointer hover:underline">
-                      {locale.COMMON.POST_TIME}: {date}
+                    <a className="pl-1 mr-2">
+                     {date}
                     </a>
-                  </Link>
                 </>
               )}
-              <div className="pl-1 mr-2">
-                {locale.COMMON.LAST_EDITED_TIME}: {post.lastEditedTime}
-              </div>
             </div>
             {BLOG.ANALYTICS_BUSUANZI_ENABLE && <div className="busuanzi_container_page_pv font-light mr-2">
             </div>}

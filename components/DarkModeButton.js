@@ -14,7 +14,7 @@ const DarkModeButton = (props) => {
   }
 
   return <div className={'z-10 duration-200 text-xl cursor-pointer py-2 ' + props.className}>
-    <i id='darkModeButton' className={`hover:scale-125 transform duration-200 fas ${isDarkMode ? 'fa-sun' : 'fa-moon'}`}
+    <i id='darkModeButton' className={`transform duration-200 fas ${isDarkMode ? 'fa-sun' : 'fa-moon'}`}
        onClick={handleChangeDarkMode} />
   </div>
 }

@@ -8,7 +8,7 @@ const CategoryList = ({ currentCategory, categories }) => {
   }
   const { locale } = useGlobal()
 
-  return <ul className='flex py-2 pb-12 space-x-3'>
+  return <ul className='flex py-2 pb-12 space-x-3 overflow-x-scroll'>
     <Link href={`../`} passHref>
     <li className='cursor-pointer duration-200 mr-1 my-1 pl-5 px-1 py-1 font-medium text-3xl whitespace-nowrap text-gray-300 hover:text-gray-700 dark:hover:text-gray-300 dark:text-gray-700 '>전체</li>
     </Link>

@@ -47,18 +47,6 @@ const BlogPostCard = ({ post, showSummary }) => {
               <NotionPage post={post} />
             </div>
           )}
-
-          <div className="text-gray-400 justify-between flex">
-          
-            <div className="md:flex-nowrap flex-wrap md:justify-start inline-block">
-              <div>
-                {' '}
-                {post.tagItems.map(tag => (
-                  <TagItemMini key={tag.name} tag={tag} />
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
 
             <div className="flex notion-card-hove sm:w-96 w-full relative duration-200 rounded-2lg cursor-pointer transform border-white dark:border-black">

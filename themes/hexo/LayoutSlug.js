@@ -6,11 +6,9 @@ import JumpToCommentButton from './components/JumpToCommentButton'
 import TocDrawer from './components/TocDrawer'
 import TocDrawerButton from './components/TocDrawerButton'
 import LayoutBase from './LayoutBase'
-import Comment from '@/components/Comment'
 import NotionPage from '@/components/NotionPage'
+import TagItemMini from './components/TagItemMini'
 import ArticleAdjacent from './components/ArticleAdjacent'
-import ArticleCopyright from './components/ArticleCopyright'
-import ArticleRecommend from './components/ArticleRecommend'
 import { isBrowser } from '@/lib/utils'
 
 export const LayoutSlug = props => {
@@ -63,17 +61,14 @@ export const LayoutSlug = props => {
               {post && <NotionPage post={post} />}
             </section>
 
-            <section className="px-1 py-2 my-1 text-sm font-light overflow-auto text-gray-600  dark:text-gray-400">
-              {/* 文章内嵌广告 */}
-              <ins className="adsbygoogle"
-                style={{ display: 'block', textAlign: 'center' }}
-                data-adtest="on"
-                data-ad-layout="in-article"
-                data-ad-format="fluid"
-                data-ad-client="ca-pub-2708419466378217"
-                data-ad-slot="3806269138" />
-            </section>
-
+            <div className="md:flex-nowrap flex-wrap md:justify-start inline-block">
+              <div>
+                {' '}
+                {post.tagItems.map(tag => (
+                  <TagItemMini key={tag.name} tag={tag} />
+                ))}
+              </div>
+            </div>
         
    
             <ArticleAdjacent {...props} />

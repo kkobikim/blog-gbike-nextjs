@@ -11,7 +11,7 @@ import React from 'react'
  */
 const JumpToTopButton = ({ showPercent = true, percent }) => {
   const { locale } = useGlobal()
-  return (<div className='space-x-1 items-center justify-center transform duration-200 w-7 h-auto pb-1 text-center' onClick={() => window.scrollTo({ top: 500, behavior: 'smooth' })} >
+  return (<div className='space-x-1 items-center justify-center transform duration-200 w-7 h-auto pb-1 text-center cursor-pointer' onClick={() => window.scrollTo({ top: 500, behavior: 'smooth' })} >
         <div title='포스트 보기' ><i class="fas fa-chevron-circle-down text-green-gcoo text-3xl"></i></div>
         {showPercent && (<div className='text-xs hidden lg:block'>{percent}</div>)}
     </div>)

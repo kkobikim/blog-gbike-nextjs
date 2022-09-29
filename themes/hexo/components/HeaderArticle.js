@@ -18,7 +18,7 @@ export default function HeaderArticle({ post, siteInfo }) {
   return (
     <div
       id="header"
-      className="w-full h-view-top relative overflow-hidden bg-cover bg-center bg-no-repeat shadow-2xl bg-fixed"
+      className="w-full h-view-top relative overflow-hidden bg-cover bg-center bg-no-repeat shadow-2xl"
       style={{ backgroundImage: headerImage }}
     >
       <header className="bg-black bg-opacity-40 absolute top-0 w-full h-view-top pb-1 flex justify-center items-end font-sans">

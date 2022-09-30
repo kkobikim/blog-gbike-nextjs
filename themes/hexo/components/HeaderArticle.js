@@ -32,7 +32,7 @@ export default function HeaderArticle({ post, siteInfo }) {
             {post.title}
           </div>
 
-          <section className="flex-wrap flex text-m justify-center mt-10 text-gray-400 dark:text-gray-400 font-thin leading-8">
+          <section className="flex-wrap flex text-m justify-center mt-10 text-gray-200 dark:text-gray-400 font-thin leading-8">
             
             <div className='flex justify-center'>
               {post?.type[0] !== 'Page' && (

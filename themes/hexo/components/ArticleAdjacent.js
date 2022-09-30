@@ -18,7 +18,7 @@ export default function ArticleAdjacent ({ prev, next }) {
     <img
                 src={prev?.page_cover}
                 alt={prev.title}
-                className="cursor-pointer h-44 w-full max-w-full rounded-2lg transform object-cover duration-200"
+                className="cursor-pointer h-48 w-full max-w-full rounded-2lg transform object-cover duration-200 border-white md:hover:-translate-y-2 md:hover:shadow-xl"
               />
               </Link>
               <Link href={`/article/${prev.slug}`} passHref>
@@ -32,7 +32,7 @@ export default function ArticleAdjacent ({ prev, next }) {
     <img
                 src={next?.page_cover}
                 alt={next.title}
-                className="cursor-pointer h-44 w-full rounded-2lg transform object-cover duration-200"
+                className="cursor-pointer h-48 w-full rounded-2lg transform object-cover duration-200 border-white md:hover:-translate-y-2 md:hover:shadow-xl"
               />
               </Link>
               <Link href={`/article/${next.slug}`} passHref>

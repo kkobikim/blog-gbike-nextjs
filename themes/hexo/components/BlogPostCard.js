@@ -20,7 +20,7 @@ const BlogPostCard = ({ post, showSummary }) => {
               </a>
             <a
               className={`replace cursor-pointer notion-card-text text-2xl font-sans ${showPreview ? 'text-center' : ''
-                } leading-tight text-gray-600 dark:text-gray-100`}
+                } leading-tight font-medium text-gray-700 dark:text-gray-100`}
             >
               {post.title}
             </a>

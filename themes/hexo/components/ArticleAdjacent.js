@@ -12,7 +12,7 @@ export default function ArticleAdjacent ({ prev, next }) {
   }
   return <section className=''>
     <div className='flex md:pr-12 font-medium text-3xl pb-8 pt-10'>추천 포스트</div>
-    <div className='text-gray-800 items-start text-2xl flex flex-col md:flex-row justify-between m-1 pt-5'>
+    <div className='text-gray-800 items-start text-xl flex flex-col md:flex-row justify-between m-1 pt-5'>
     <div className='flex flex-col w-full md:flex-1 md:pr-12'>
     <Link href={`/article/${prev.slug}`} passHref>
     <img

@@ -49,12 +49,12 @@ const BlogPostCard = ({ post, showSummary }) => {
           )}
         </div>
 
-            <div className="flex notion-card-hove sm:w-96 w-full relative duration-200 rounded-2lg cursor-pointer transform border-white dark:border-black">
+            <div className="flex notion-card-hover sm:w-96 w-full relative duration-200 rounded-2lg cursor-pointer transform border-white dark:border-black">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={post?.page_cover}
                 alt={post.title}
-                className=" max-h-52 h-44 w-full rounded-2lg transform object-cover duration-200"
+                className="max-h-52 h-44 w-full rounded-2lg transform object-cover duration-200"
               />
               {/* <Image className='hover:scale-125 rounded-t-xl lg:rounded-r-xl lg:rounded-t-none transform duration-500' src={post?.page_cover} alt={post.title} layout='fill' objectFit='cover' loading='lazy' /> */}
             </div>

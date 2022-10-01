@@ -1927,7 +1927,6 @@ pre[class*='language-'] {
 
 
 .notion-card:hover .notion-card-hover {
-  border:1px solid var(--bg-color);
   transform: translateY(-7px);
   transition: all 0.2s ease-out;
   background:none;

@@ -21,7 +21,7 @@ export default function HeaderArticle({ post, siteInfo }) {
       className="w-full h-view-top relative overflow-hidden bg-cover bg-center bg-no-repeat shadow-2xl"
       style={{ backgroundImage: headerImage }}
     >
-      <header className="bg-black bg-opacity-40 absolute top-0 w-full h-view-top pb-1 flex justify-center items-end font-sans">
+      <header className="bg-black bg-opacity-50 absolute top-0 w-full h-view-top pb-1 flex justify-center items-end font-sans">
         <div className='mb-4'>
           {/* 文章Title */}
                   <div className="pb-5 font-thin text-gray-300 dark:text-white flex justify-center">

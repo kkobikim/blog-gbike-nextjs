@@ -100,14 +100,14 @@ const TopNav = props => {
 
     {/* 导航栏 */}
     <div id='sticky-nav' className={'top-0 fixed bg-none animate__animated animate__fadeIn dark:text-gray-200 text-black w-full z-20 transform duration-200 font-san border-transparent dark:border-transparent justify-center s'}>
-      <div className='w-full max-w-screen-lg flex justify-between m-auto items-center px-6 py-2'>
+      <div className='w-full max-w-screen-lg flex justify-between m-auto items-center pl-5 pr-0 py-2'>
         <div className='flex'>
          <Logo {...props}/>
         </div>
 
         {/* 右侧功能 */}
         <div className='mr-1 justify-end items-center font-serif '>
-          <div className='hidden md:flex'> <MenuButtonGroupTop {...props}/> <DarkModeButton/></div>
+          <div className='hidden md:flex'> <MenuButtonGroupTop {...props}/> </div>
           <div onClick={toggleMenuOpen} className='w-8 justify-end items-center h-8 cursor-pointer flex md:hidden'>
           { isOpen ? <i className='fas fa-times'/> : <i className='fas fa-bars'/>  }
           </div>

@@ -49,7 +49,7 @@ const BlogPostCard = ({ post, showSummary }) => {
           )}
         </div>
 
-            <div className="flex notion-card-hover sm:w-96 w-full relative duration-200 rounded-2lg cursor-pointer transform border-white dark:border-black">
+            <div className="flex notion-card-hover h-44 sm:w-96 w-full relative duration-200 rounded-2lg cursor-pointer transform">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={post?.page_cover}

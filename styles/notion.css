@@ -445,10 +445,12 @@
 .notion-h2 {
   font-size: 1.5em;
   margin-top: 1.1em;
+  font-weight: 800;
 }
 .notion-h3 {
   font-size: 1.25em;
   margin-top: 1em;
+  font-weight: 800;
 }
 
 .notion-h:hover .notion-hash-link {
@@ -1954,6 +1956,7 @@ pre[class*='language-'] {
   background-color: transparent;
   border: 0px;
   }
+  
 .notion-block-20811349b6894127a9018f7f0721041c .notion-page-icon-inline {
 display: none;
 }
@@ -2018,4 +2021,6 @@ display: none;
   font-size: 1.4em;
 }
 
-
+.notion-asset-wrapper img{
+  border-radius: 1.5em;
+}

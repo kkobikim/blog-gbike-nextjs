@@ -1,9 +1,8 @@
 import BLOG from '@/blog.config'
 import { useRouter } from 'next/router'
 import React from 'react'
-import { createPopper } from '@popperjs/core'
+import Link from 'next/link'
 import copy from 'copy-to-clipboard'
-import QRCode from 'qrcode.react'
 import { useGlobal } from '@/lib/global'
 
 
@@ -23,13 +22,22 @@ const ShareBar = ({ post }) => {
 
   return <>
     <div
-      className='py-2 text-gray-500 text-center space-x-2 flex my-1 dark:text-gray-200'>
+      className='py-2 w-full flex justify-between text-gray-700 text-center space-x-2 flex my-1 dark:text-gray-200'>
    
-      <div className='cursor-pointer text-2xl'>
-        <a className='text-yellow-600' onClick={copyUrl} >
-          <i className='fas fa-link'/>
+      <div className='cursor-pointer text-sm bg-gray-200 border py-2 px-3 rounded-md'>
+        <a className='' onClick={copyUrl} >
+          <i className='fas fa-link pr-1'/> 공유하기
         </a>
       </div>
+
+      <div className='cursor-pointer text-sm bg-gray-200 border py-2 px-3 rounded-md'>
+      <Link href='mailto:kkobi.kim@gbike.io' passHref>
+        <a target="_blank">
+          <i className='fas fa-envelope pr-1'/> 의견 보내기
+        </a>
+        </Link>
+      </div>
+
     </div>
   </>
 }

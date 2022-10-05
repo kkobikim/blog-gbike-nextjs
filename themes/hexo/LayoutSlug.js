@@ -5,6 +5,7 @@ import HeaderArticle from './components/HeaderArticle'
 import JumpToCommentButton from './components/JumpToCommentButton'
 import TocDrawer from './components/TocDrawer'
 import TocDrawerButton from './components/TocDrawerButton'
+import ShareBar from './components/ShareBar'
 import LayoutBase from './LayoutBase'
 import NotionPage from '@/components/NotionPage'
 import TagItemMini from './components/TagItemMini'
@@ -70,6 +71,7 @@ export const LayoutSlug = props => {
                 ))}
               </div>
             </div>
+            <ShareBar {...props} />
             {showArticleInfo && <>
             <RecommendPosts currentPost={post} recommendPosts={recommendPosts} />
             <ArticleAdjacent {...props} />

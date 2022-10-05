@@ -12,7 +12,7 @@ const RecommendPosts = ({ recommendPosts }) => {
   const { locale } = useGlobal()
 
   return (
-    <div className="pt-2 pl-4 py-2 my-4 dark:text-gray-300 ">
+    <div className="pt-2 py-2 my-4 dark:text-gray-300 ">
        <div className='md:pr-12 font-medium dark:text-white text-3xl pb-8 pt-20'>새로운 포스트</div>
         <ul className="font-light text-sm">
           {recommendPosts.map(post => (
@@ -20,7 +20,7 @@ const RecommendPosts = ({ recommendPosts }) => {
                 <img
                 src={post?.page_cover}
                 alt={post.title}
-                className="cursor-pointer h-20 md:h-40 w-1/3 rounded-2lg transform object-cover duration-200 border-white md:hover:-translate-y-2 md:hover:shadow-xl"
+                className="cursor-pointer h-25 md:h-40 w-1/3 rounded-2lg transform object-cover duration-200 border-white md:hover:-translate-y-2 md:hover:shadow-xl"
                 
               />
               <Link href={`/article/${post.slug}`}>
@@ -29,7 +29,7 @@ const RecommendPosts = ({ recommendPosts }) => {
                 {post.category}
               </a>
             <a
-              className={`replace cursor-pointer notion-card-text text-xl font-sans leading-tight font-medium text-gray-700 dark:text-gray-100`}
+              className={`replace cursor-pointer notion-card-text text-lg md:text-xl font-sans leading-tight font-medium text-gray-700 dark:text-gray-100`}
             >
               {post.title}
             </a>

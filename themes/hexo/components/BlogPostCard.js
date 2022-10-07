@@ -1,7 +1,6 @@
 import BLOG from '@/blog.config'
 import Link from 'next/link'
 import React from 'react'
-import TagItemMini from './TagItemMini'
 import CONFIG_HEXO from '../config_hexo'
 import NotionPage from '@/components/NotionPage'
 
@@ -14,7 +13,7 @@ const BlogPostCard = ({ post, showSummary }) => {
         key={post.id}
         className="notion-card animate__animated animate__fadeIn flex sm:flex-row justify-between duration-300 flex-col-reverse"
       >
-        <div className="p-4 flex flex-col w-full">
+        <div className="p-4 pr-8 flex flex-col w-full">
               <a className="cursor-pointer my-2 font-light text-gray-500 dark:text-gray-300 text-sm transform">
                 {post.category}
               </a>

@@ -11,7 +11,7 @@ const CategoryList = ({ currentCategory, categories }) => {
   const { locale } = useGlobal()
   const router = useRouter();
   const selected0 = router.pathname !== '/category/[category]'
-  return <ul className='flex py-2 md:pl-5 pb-12 space-x-3 overflow-x-scroll hidden-scrollbar'>
+  return <ul className='flex py-4 md:pl-5 pb-12 space-x-3 overflow-x-scroll hidden-scrollbar'>
     <Link href={`../`} passHref>
     <li
             className={`cursor-pointer duration-200 mr-1 my-1 px-1 py-1 font-medium text-2xl md:text-3xl whitespace-nowrap

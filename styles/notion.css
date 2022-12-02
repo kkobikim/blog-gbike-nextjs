@@ -1999,6 +1999,30 @@ display: none;
 
 
 
+.notion-block-f047c604103d4c839222514e149d9366 {
+  margin-top:80px;
+  background-color: transparent;
+  border: 0px;
+  }
+.notion-block-f047c604103d4c839222514e149d9366 .notion-page-icon-inline {
+display: none;
+}
+.notion-block-f047c604103d4c839222514e149d9366 .notion-asset-wrapper-image img{
+  border-radius: 50%;
+}
+.notion-block-f047c604103d4c839222514e149d9366 .notion-asset-wrapper-image{
+  padding: 10px 10px 20px 10px;
+}
+.notion-block-f047c604103d4c839222514e149d9366 .notion-text {
+  text-align : center;
+   letter-spacing: -0.02em;
+}
+.notion-block-f047c604103d4c839222514e149d9366 .notion-text b{
+  font-size: 1.4em;
+}
+
+
+
 
 .notion-block-80964c7fbd3a48cfa13acc573255c68e {
   margin-top:80px;

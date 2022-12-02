@@ -8,6 +8,7 @@ const CONFIG_HEXO = {
   MENU_TAG: true, // 显示标签
   MENU_ARCHIVE: true, // 显示归档
   MENU_SEARCH: true, // 显示搜索
+  MENU_APP: true, // 显示搜索
 
   POST_LIST_COVER: true, // 文章封面
   POST_LIST_SUMMARY: true, // 文章摘要
